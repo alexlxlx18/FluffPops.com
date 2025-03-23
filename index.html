@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluff Pops - Sweet Treats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Fluff Pops Logo" class="logo">
+        <h1 class="bolaga">Fluff Pops</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="section active">
+            <div class="product-container">
+                <div class="product-image">
+                    <img src="logo.png" alt="Fluff Pops">
+                </div>
+                <div class="product-details">
+                    <h1>Fluff Pops</h1>
+                    <p>Marshmallows coated with pastillas, dipped in melted chocolate, and sprinkled with crushed almonds.</p>
+                    <h3>Price: 15 Pesos</h3>
+                    <div class="order-section">
+                        <div class="purchase-container">
+                            <h2>Complete Your Purchase</h2>
+                    
+                            <div class="cart-summary">
+                                <h3>🛒 Your Cart</h3>
+                                <ul id="cartItems"></ul>
+                            </div>
+                    
+                            <form id="purchaseForm" class="purchase-form">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="address">Delivery Address</label>
+                                    <textarea id="address" placeholder="Enter your delivery address" required></textarea>
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="contactNumber">Contact Number</label>
+                                    <input type="tel" id="contactNumber" placeholder="Enter your phone number" required>
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="paymentMethod">Payment Method</label>
+                                    <select id="paymentMethod">
+                                        <option value="Cash on Delivery">Cash on Delivery</option>
+                                        <option value="Credit Card">Credit Card</option>
+                                        <option value="GCash">GCash</option>
+                                    </select>
+                                </div>
+                    
+                                <button type="submit" class="order-btn">Place Order</button>
+                            </form>
+                        </div>
+                    </div>
+                    <h3>Ingredients:</h3>
+                    <ul>
+                        <li>Marshmallows</li>
+                        <li>Chocolate syrup</li>
+                        <li>Crushed almonds</li>
+                        <li>Pastillas</li>
+                    </ul>
+                    <p class="caution">⚠️ Caution: Contains nuts and dairy. May not be suitable for individuals with allergies.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    
+    <footer>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61573500857247">Fluff Pops Official</a></p>
+            <p>&copy; 2025 Fluff Pops. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buyButton = document.querySelector(".buy-now");
+            buyButton.addEventListener("click", function () {
+                alert("Thank you for your interest! Online orders coming soon.");
+            });
+        });
+        
+        function increaseQuantity() {
+            let quantity = document.getElementById("quantity");
+            quantity.textContent = parseInt(quantity.textContent) + 1;
+        }
+        function decreaseQuantity() {
+            let quantity = document.getElementById("quantity");
+            if (parseInt(quantity.textContent) > 1) {
+                quantity.textContent = parseInt(quantity.textContent) - 1;
+            }
+        }
+    </script>
+</body>
+</html>
